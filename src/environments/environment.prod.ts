@@ -1,4 +1,4 @@
 export const environment = {
-  apiBaseUrl: 'https://familyaccount.herokuapp.com/api',
+  apiBaseUrl: 'https://fmlyold-api.vercel.app/api',
   production: true
 };
