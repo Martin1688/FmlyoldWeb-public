@@ -1,0 +1,25 @@
+<br><br><br>
+<div>
+    <form role="form">
+        <h4>備份資料庫檔</h4>
+        <div class="row" *ngIf="formError">
+            <div class="col-12  col-md-12" class="alert alert-danger" role="alert">
+                {{ formError }}
+            </div>
+        </div>
+
+        <div class="row fMargin">
+            <div class="col-12 col-md-6">
+                <button type="button" class="btn btn-primary" (click)="dynamicDownloadTxt()">下載資料庫備份檔</button>
+            </div>
+            <div>
+                <label class="btn btn-primary">
+                    <input type="file" name="files" (change)="uploadFile($event)" style="display: none;" />上傳備份檔復原資料庫
+                </label>
+                <!-- <button type="button" class="btn btn-primary" (click)="restoredDB()"
+                    style="margin-left: 100px;">資料庫復原</button> -->
+            </div>
+        </div>
+
+    </form>
+</div>

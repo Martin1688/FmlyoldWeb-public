@@ -1,0 +1,17 @@
+.fMargin {
+    margin-top: 10px;
+}
+
+.fRight {
+    text-align: right;
+}
+
+.col-12 {
+    text-align: left;
+}
+
+.form-control {
+    background-color: lightgoldenrodyellow;
+    color: darkcyan;
+    font-weight: 800;
+}

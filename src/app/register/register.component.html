@@ -1,0 +1,27 @@
+<!-- <app-page-header [content]="pageContent.header"></app-page-header> -->
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-12 col-md-8">
+        <p class="lead">如果已經是會員請直接 <a routerLink="/login" class="btn btn-primary">登 入</a> </p>
+        <form (submit)="onRegisterSubmit()">
+            <div role="alert" *ngIf="formError" class="alert alert-danger">
+                {{ formError }}</div>
+            <div class="form-group">
+                <label for="name">帳號</label>
+                <input (focus)="clearErr()" class="form-control" id="name" name="name" placeholder="輸入帳號" [(ngModel)]="credentials.name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email </label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="輸入 email " [(ngModel)]="credentials.email">
+            </div>
+            <div class="form-group">
+                <label for="password">密碼</label>
+                <input type="pasword" class="form-control" id="password" name="password" placeholder="密碼(英文字母+數字)" [(ngModel)]="credentials.password">
+            </div>
+            <button type="submit" role="button" class="btn btn-primary">註冊</button>
+        </form>
+    </div>
+    <!-- <app-sidebar [content]="pageContent.sidebar" class="col-12 col-md-4"></app-sidebar> -->
+</div>

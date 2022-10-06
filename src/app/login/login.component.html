@@ -1,0 +1,38 @@
+<br/>
+<br/>
+<br/>
+<div class="row">
+    <div class="col-12">
+        <p class="lead">不是會員請先 <a routerLink="/register" class="btn btn-primary">註 冊</a> </p>
+        <form (submit)="onLoginSubmit()">
+            <div role="alert" *ngIf="formError" class="alert alert-danger">
+                {{ formError }}</div>
+            <div class="input-group fMargin">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">姓名：</span>
+                </div>
+                <input (focus)="clearErr()" class="form-control" id="name" name="name" placeholder="輸入帳號" [(ngModel)]="credentials.name">
+            </div>
+            <div class="input-group fMargin">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Email：</span>
+                </div>
+                <input type="email" class="form-control" id="email" name="email" placeholder="輸入 email " [(ngModel)]="credentials.email">
+            </div>
+            <div class="input-group fMargin">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">密 碼：</span>
+                </div>
+                <input type="pasword" class="form-control" id="password" name="password" placeholder="輸入密碼" [(ngModel)]="credentials.password">
+            </div>
+            <div class="col-12 fMargin">
+                <button type="submit" role="button" class="btn btn-primary">登入</button>
+                <input type="checkbox" name="keepLocal" [(ngModel)]="credentials.keep" style="margin-left: 100px;">
+                <label for="keepLocal">保留帳號，下次不用輸入</label>
+            </div>
+
+
+        </form>
+    </div>
+
+    <!-- <app-sidebar [conteont]="pageContent.sidebar" class="col-12 col-md-4"></app-sidebar> -->
