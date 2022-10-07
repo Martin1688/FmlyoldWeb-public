@@ -1,4 +1,4 @@
 export const environment = {
-  apiBaseUrl: 'https://fmlyold-api.vercel.app/api',
+  apiBaseUrl: 'https://slate-gray-scarab-hem.cyclic.app',
   production: true
 };
